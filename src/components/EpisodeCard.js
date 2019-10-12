@@ -7,7 +7,7 @@ export default function CharacterList() {
   const [ characters, setCharacters ] = useState([]);
 
   useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/character/')
+    axios.get('https://https://rickandmortyapi.com/api/character/')
       .then((res) => {
         setCharacters(res.data.results);
       })
@@ -15,7 +15,7 @@ export default function CharacterList() {
 
   console.log(characters);
   return (
-    <section className="character-list grid-view">
+    <section className="episode-list grid-view">
       {characters.map((char) => {
         return (
           <CharacterCard key={char.name} name={char.name} image={char.image} location={char.location} status={char.status} origin={char.origin} />
