@@ -1,26 +1,21 @@
+  
+import React from "react";
+import styled from 'styled-components';
+import { Card } from 'semantic-ui-react';
 
-import React, { useEffect, useState } from "react";
-import CharacterCard from './CharacterCard';
-import axios from 'axios';
-
-export default function CharacterList() {
-  const [ characters, setCharacters ] = useState([]);
-
-  useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/character/')
-      .then((res) => {
-        setCharacters(res.data.results);
-      })
-  }, []);
-
-  console.log(characters);
-  return (
-    <section className="character-list grid-view">
-      {characters.map((char) => {
-        return (
-          <CharacterCard key={char.name} name={char.name} image={char.image} location={char.location} status={char.status} origin={char.origin} />
-        )
-      })}
-    </section>
-  );
-}
+const StyledCard = styled(Card) `
+  font-size: 1.5rem;
+  width: 30%;
+`
+export default function CharacterCard(props) {
+  console.log(props)
+  return(
+  <StyledCard>
+    <img src={props.image} />
+    {props.name}
+    <p style={{color: 'silver'}}>{props.status}</p>
+    Location: {props.location.name}<br/>
+    Origin: {props.origin.name}
+  </StyledCard>
+  )
+  }
