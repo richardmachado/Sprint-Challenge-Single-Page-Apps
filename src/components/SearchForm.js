@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+function SearchForm(props) {
+  const [result, setResult] = useState();
+  const handleChanges = event => {
+    setResult(event.target.value);
+  };
 
-export default function SearchForm({ onSearch }) {
-  // STRETCH TODO: Add stateful logic for query/form data
-  return (
-    <section className="search-form">
-      <form onSubmit={() => onSearch(name)}>
-        <input
-          onChange={handleInputChange}
-          placeholder="name"
-          value={name}
-          name="name"
-        />
-        <button type="submit">Search</button>
-      </form>
-    </section>
-  );
+  const submitHandler = event => {
+    event.preventDefault();
+
+  const filter = props.character.filter(character => {
+    return character.name.indexOf(result) !== -1;
+  });
+  props.searching(filter)
+};
+
+return ( 
+  <section>
+  <form onSubmit={submitHandler}>
+  <input
+    onChange={handleChanges}
+    type='text'
+    name='character'
+    id='character'
+    placeholder='Search'
+  />
+  </form>
+  </section>
+);
 }
+
+export default SearchForm;
