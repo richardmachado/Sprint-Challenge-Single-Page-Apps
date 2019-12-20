@@ -49,3 +49,15 @@ header h1 {
   color: white;
   border-radius: 20px;
 }
+
+.episodes-list {
+  width: 60%;
+  height: 60px;
+  padding: 10px;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

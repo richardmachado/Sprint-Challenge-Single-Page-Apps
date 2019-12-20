@@ -18,7 +18,8 @@ export default function CharacterList() {
   };
 
   useEffect(() => {
-    Axios.get("https://rickandmortyapi.com/api/character/").then(response => {
+    Axios.get("https://rickandmortyapi.com/api/character/")
+    .then(response => {
       console.log(response.data.results);
       setCharacters(response.data.results);
       updateData(response.data.results);
@@ -31,6 +32,7 @@ export default function CharacterList() {
       <Link className="main-buttons" to={"/"}>
         Home
       </Link>
+      <Link className="main-buttons" to={"/episodes"}>Episodes</Link>
       <SearchForm search={search} characters={characters} />
       {filteredData.map(char => {
         return <CharacterCard key={char.id} character={char} />;

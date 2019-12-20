@@ -12,6 +12,7 @@ export default function WelcomePage() {
           alt="rick"
         />
         <Link className="main-buttons" to={'/characters'}>See Characters</Link>
+        <Link className="main-buttons" to={'/episodes'}>See Episodes</Link>
       </header>
     </section>
   );

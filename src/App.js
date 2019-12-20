@@ -2,7 +2,8 @@ import React from "react";
 import {Route} from "react-router-dom"
 import WelcomePage from './components/WelcomePage'
 import CharacterList from './components/CharacterList'
-import CharacterCard from './components/CharacterCard'
+import EpisodesList from './components/EpisodesList'
+
 import Header from './components/Header';
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
       <Header />
       <Route exact path="/" component={WelcomePage} />
       <Route path="/characters" component={CharacterList} />
-      {/* <Route path="/characters/:id" component = {CharacterCard.id} /> */}
+      <Route path="/episodes" component = {EpisodesList} /> 
     </main>
   );
 }

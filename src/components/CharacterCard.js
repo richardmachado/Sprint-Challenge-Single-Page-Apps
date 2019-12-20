@@ -18,7 +18,7 @@ export default function CharacterCard(props) {
     `;
   
     const CardInfo = styled.div`
-      tex-align: left;
+      text-align: left;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -26,8 +26,8 @@ export default function CharacterCard(props) {
     `;
   
     const Status = styled.div`
-      tex-align: left;
-      background: green;
+      text-align: left;
+      background: dodgerblue;
       height: 30px;
       vertical-align: middle;
       color: white;
@@ -46,6 +46,7 @@ export default function CharacterCard(props) {
           <div>Gender: {props.character.gender}</div>
           <div>Species: {props.character.species}</div>
           <div>Origin: {props.character.origin.name}</div>
+        
         </CardInfo>
         <Status>Status: {props.character.status}</Status>
       </Card>

@@ -29,7 +29,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
- Client side routing allows us to create seamless user experiences with faster page loads and no page flashes in single page apps.
+ Client side routing allows us to create seamless user experiences with faster page loads and no page flashes in single page apps. The only downside is a possible longer inital load time.
 
 
 ## Project Set Up
