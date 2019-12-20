@@ -13,6 +13,7 @@ export default function WelcomePage() {
         />
         <Link className="main-buttons" to={'/characters'}>See Characters</Link>
         <Link className="main-buttons" to={'/episodes'}>See Episodes</Link>
+        <Link className="main-buttons" to={'/locations'}>See Locations</Link>
       </header>
     </section>
   );

@@ -11,18 +11,19 @@ export default function EpisodeList() {
     axios.get('https://rickandmortyapi.com/api/episode/')
         .then((res) => {
         setEpisodes(res.data.results);
-        console.log(res.data.results)
+       
         
         })
     }, []);
 
-    // console.log(episodes);
+  
     return (
 
     <section className="character-list">
            <h2>Episodes List</h2>
                 <Link className="main-buttons" to={"/"}>Home</Link>
                 <Link className="main-buttons" to={"/characters"}>Characters</Link>
+                <Link className="main-buttons" to={"/locations"}>Locations</Link>
            {episodes.map(epi => 
             <div className="episodes-list" key={epi.id}>
                 <li>Episode # {epi.id}</li>
